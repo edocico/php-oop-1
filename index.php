@@ -48,7 +48,7 @@ $film_list = [
 <body>
 
     <header>
-        <h1>Tabella dei Film</h1>
+        <h1>Lista dei Film</h1>
     </header>
     <main>
         <ul>
