@@ -51,16 +51,16 @@ $film_list = [
         <h1>Lista dei Film</h1>
     </header>
     <main>
-        <ul>
+       
             <?php foreach ($film_list as $production) { ?>
-                <li>TITOLO: <?php echo $production->title?></li>
-                <li>LINGUA ORIGINALE: <?php echo $production->language?></li>
-                <li>VOTO: <?php echo $production->rating?></li>
-                <li>REGISTA: <?php echo $production->director?></li>
+               <h3>TITOLO: <?php echo $production->title ?> </h3>
+               <p>LINGUA ORIGINALE: <?php echo $production->language ?></p>
+               <p>VOTO: <?php echo $production->rating ?></p>
+               <p>REGISTA: <?php echo $production->director ?></p>
             <?php
             }
             ?>
-        </ul>
+       
     </main>
     
 </body>
