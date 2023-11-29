@@ -1,9 +1,11 @@
 <?php
 
 require_once __DIR__ . '/Production.php';
+require_once __DIR__ . '/../Traits/Director.php';
 
 class Movie extends Production {
 
+    use Director;
     public $profit;
     public $duration;
 

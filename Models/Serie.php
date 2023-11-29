@@ -12,9 +12,9 @@ class Serie extends Production {
         }
     }
 
-    function __construct($_title, $_language, $_rating, $_director, $_season)
+    function __construct($_title, $_language, $_rating, $_season)
     {
-        parent::__construct($_title, $_language, $_rating, $_director);
+        parent::__construct($_title, $_language, $_rating,);
         $this->setSeason($_season);
     }
 }
