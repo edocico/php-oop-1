@@ -18,14 +18,31 @@ $movie5 = new Movie('The Lion King', 'English', 8.5, 'Roger Allers', 1663, 89);
 
 $serie1 = new Serie('Breaking Bad', 'English', 8.5, 5);
 
+$serie2 = new Serie('Game of Thrones', 'English', 7.5, 8);
+
+$serie3 = new Serie('The walking dead', 'English', 7, 11);
+
+$serie4 = new Serie('The Sopranos', 'English', 8.5, 6);
+
+$serie5 = new Serie('Romanzo Criminale', 'Italiano', 8, 2);
 
 
-
-
-/* $production_list = [
-   
+$production_list = [
+   $movie1,
+   $movie2,
+   $movie3,
+   $movie4,
+   $movie5,
+   $serie1,
+   $serie2,
+   $serie3,
+   $serie4,
+   $serie5,
 ];
- */
+
+
+
+
 
 ?>
 
@@ -47,7 +64,7 @@ $serie1 = new Serie('Breaking Bad', 'English', 8.5, 5);
                <h3>TITOLO: <?php echo $production->title ?> </h3>
                <p>LINGUA ORIGINALE: <?php echo $production->language ?></p>
                <p>VOTO: <?php echo $production->rating ?></p>
-               <p>REGISTA: <?php echo $production->director ?></p>
+               
             <?php
             }
             ?>
