@@ -14,7 +14,7 @@ var_dump($production2);
 $production3 = new Production('Full metal jacket', 'English', 9.5, 'Kubrick');
 var_dump($production3);
 
-// var_dump($production1->getDetails());
+
 
 $film_list = [
     $production1,
