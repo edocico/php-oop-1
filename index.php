@@ -4,7 +4,7 @@ class Production {
 
     public $title;
     public $language;
-    public $rating;
+    public $rating = 0;
     public $director;
 
     function __construct($_title, $_language, $_rating, $_director)
@@ -16,7 +16,18 @@ class Production {
     }
 
     public function setRating($rating) {
-        $this->rating = intval($rating);
+        if (is_numeric($rating) && $rating >= 1 && $rating <= 10) {
+
+            $this->rating = $rating;
+        };
+    }
+
+    public function getRating() {
+        return $this->rating;
+    }
+
+    public function getDetails() {
+        return "Title: $this->title <br/> Language $this->language <br/> Rating: $this->rating";
     }
 }
 
@@ -28,6 +39,8 @@ var_dump($production2);
 
 $production3 = new Production('Full metal jacket', 'English', 9.5, 'Kubrick');
 var_dump($production3);
+
+var_dump($production1->getDetails());
 
 $film_list = [
     $production1,
