@@ -1,35 +1,9 @@
 <?php
 
-class Production {
+require_once __DIR__ . '/Models/Production.php';
+require_once __DIR__ . '/Models/Movie.php';
+require_once __DIR__ . '/Models/Serie.php';
 
-    public $title;
-    public $language;
-    public $rating = 0;
-    public $director;
-
-    function __construct($_title, $_language, $_rating, $_director)
-    {
-        $this->title = $_title;
-        $this->language = $_language;
-        $this->setRating($_rating);
-        $this->director = $_director;
-    }
-
-    public function setRating($rating) {
-        if (is_numeric($rating) && $rating >= 1 && $rating <= 10) {
-
-            $this->rating = $rating;
-        };
-    }
-
-    public function getRating() {
-        return $this->rating;
-    }
-
-    public function getDetails() {
-        return "Title: $this->title <br/> Language $this->language <br/> Rating: $this->rating";
-    }
-}
 
 $production1 = new Production('The Matrix', 'English', 9, 'Wachowski');
 var_dump($production1);
@@ -40,7 +14,7 @@ var_dump($production2);
 $production3 = new Production('Full metal jacket', 'English', 9.5, 'Kubrick');
 var_dump($production3);
 
-var_dump($production1->getDetails());
+// var_dump($production1->getDetails());
 
 $film_list = [
     $production1,
