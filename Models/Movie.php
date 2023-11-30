@@ -21,6 +21,10 @@ class Movie extends Production {
         }
     }
 
+    public function getDuration() {
+        return $this->duration;
+    }
+
     function __construct($_title, $_language, $_rating, $_director, $_profit, $_duration)
     {
         parent::__construct($_title, $_language, $_rating, $_director);

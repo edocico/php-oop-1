@@ -64,7 +64,11 @@ $production_list = [
                <h3>TITOLO: <?php echo $production->title ?> </h3>
                <p>LINGUA ORIGINALE: <?php echo $production->language ?></p>
                <p>VOTO: <?php echo $production->rating ?></p>
-               
+               <p>BONUS: <?php if($production instanceof Movie) {
+                echo $production->duration;
+               } else {
+                echo $production->season;
+               }  ?></p>
             <?php
             }
             ?>
